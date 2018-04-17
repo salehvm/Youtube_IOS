@@ -65,62 +65,26 @@ class VideoCell: BaseCell {
     func setupProfileImage() {
         
         if let profileImageUrl = video?.channel?.profileImageName {
-            
-            
-            let url = URL(string: profileImageUrl)
-            
-            URLSession.shared.dataTask(with: url!) { (data, response, error) in
-                
-                if error != nil {
-                    
-                    return
-                }
-                
-                
-                DispatchQueue.main.sync {
-                    self.userProfileImageView.image = UIImage(data: data!)
-                    
-                }
-                
-                }.resume()
-            
+            userProfileImageView.loadImageUsingUrlString(urlString: profileImageUrl)
         }
     }
     
     func setupThumbnailImage() {
         if let thumbnailImageUrl = video?.thumbnailImageName {
-
-
-            let url = URL(string: thumbnailImageUrl)
-            
-            URLSession.shared.dataTask(with: url!) { (data, response, error) in
-                
-                if error != nil {
-                    
-                    return
-                }
-               
-               
-                DispatchQueue.main.sync {
-                    self.thumbnailImageView.image = UIImage(data: data!)
-                    
-                }
-                
-            }.resume()
- 
+            thumbnailImageView.loadImageUsingUrlString(urlString: thumbnailImageUrl)
         }
     }
     
-    let thumbnailImageView: UIImageView = {
-        let imageView = UIImageView()
+    let thumbnailImageView: CustomImageView = {
+        let imageView = CustomImageView()
         imageView.image = UIImage(named: "saleh2")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
     }()
     
-    let userProfileImageView: UIImageView = {
-        let imageView = UIImageView()
+    let userProfileImageView: CustomImageView = {
+        let imageView = CustomImageView()
         imageView.image = UIImage(named: "saleh3")
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 22

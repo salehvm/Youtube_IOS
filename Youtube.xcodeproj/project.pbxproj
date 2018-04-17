@@ -17,6 +17,8 @@
 		C61E97E92082964A009CA483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61E97E72082964A009CA483 /* LaunchScreen.storyboard */; };
 		C61E97F22082C2A4009CA483 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E97F12082C2A4009CA483 /* Extensions.swift */; };
 		C61E97F52082C37B009CA483 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E97F42082C37B009CA483 /* VideoCell.swift */; };
+		C634F751208557D000974830 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634F750208557D000974830 /* SettingsLauncher.swift */; };
+		C634F7532086054F00974830 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634F7522086054F00974830 /* SettingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C61E97EA2082964A009CA483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C61E97F12082C2A4009CA483 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C61E97F42082C37B009CA483 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		C634F750208557D000974830 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		C634F7522086054F00974830 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				C61E97F42082C37B009CA483 /* VideoCell.swift */,
 				C61CBB2020833BBC0051DB83 /* MenuBar.swift */,
+				C634F7522086054F00974830 /* SettingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C61E97DD20829648009CA483 /* HomeController.swift */,
+				C634F750208557D000974830 /* SettingsLauncher.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 				C61E97DE20829648009CA483 /* HomeController.swift in Sources */,
 				C61CBB2120833BBC0051DB83 /* MenuBar.swift in Sources */,
 				C61E97E420829648009CA483 /* Youtube.xcdatamodeld in Sources */,
+				C634F751208557D000974830 /* SettingsLauncher.swift in Sources */,
 				C61E97DC20829648009CA483 /* AppDelegate.swift in Sources */,
 				C61CBB2420835BEE0051DB83 /* Video.swift in Sources */,
 				C61E97F22082C2A4009CA483 /* Extensions.swift in Sources */,
+				C634F7532086054F00974830 /* SettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

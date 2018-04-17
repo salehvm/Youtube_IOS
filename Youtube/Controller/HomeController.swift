@@ -69,7 +69,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     self.videos?.append(video)
                 }
                 
-                self.collectionView?.reloadData()
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+                
+                
                 
             }
             
@@ -110,12 +114,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let moreButton = UIBarButtonItem(image: UIImage(named: "nav_more_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMore))
         navigationItem.rightBarButtonItems = [moreButton, searchBatButtonItem]
     }
+    let settingsLauncher = SettingsLauncher()
+    
+    @objc func handleMore() {
+        // show menu
+        
+        settingsLauncher.showSetting()
+    }
     
     @objc func handleSearch() {
         
-    }
-    
-    @objc func handleMore() {
         
     }
     
